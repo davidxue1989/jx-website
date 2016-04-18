@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router';
 
 var NavBar = React.createClass({
   render: function() {
@@ -11,11 +12,11 @@ var NavBar = React.createClass({
               <span className="icon-bar"></span>
               <span className="icon-bar"></span> 
             </button>
-            <a className="navbar-brand" href="#">Dr. Jason Xue</a>
+            <Link className="navbar-brand" to="/">Dr. Jason Xue</Link>
           </div>
           <div className="collapse navbar-collapse" id="myNavbar">
             <ul className="nav navbar-nav">
-              <li><a href="#">About</a></li>
+              <li><Link to="/About">About</Link></li>
               <li><a href="#">Contact</a></li>
               <li><a href="#">Patient Resources</a></li>
             </ul>
