@@ -5,7 +5,7 @@ var Main = React.createClass({
   render: function() {
     return (
       <div style={{backgroundColor:'clear', height:'100%'}}>
-        <NavBar/>
+        <NavBar />
         <div>
           {this.props.children}
         </div>
