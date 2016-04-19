@@ -1,6 +1,19 @@
 import React from 'react';
+import Clipboard from 'Clipboard';
+
+var clipboard = new Clipboard('.btn');
+
+clipboard.on('success', function(e) {
+    // console.log('success');
+    alert('drjasonxue@gmail.com copied to clipboard');
+});
+
+clipboard.on('error', function(e) {
+  console.log('clipboard copy failed');
+});
 
 var Contact = React.createClass({
+
   render: function() {
     return (
       
@@ -18,7 +31,10 @@ var Contact = React.createClass({
             at Green Lane Physiotherapy & Wellness
             <br/>
             <br/>
-            If these times and locations do not work for you, please feel free to make a booking via email <span style={{color:'#faa732'}}>drjasonxue@gmail.com</span>
+            If these times and locations do not work for you, please feel free to make a booking via email <span style={{color:'#faa732', borderBottom:'1px solid black', padding:3}}>drjasonxue@gmail.com</span>
+            <button className="btn" data-clipboard-text="drjasonxue@gmail.com" style={{backgroundColor:'white', borderStyle:'solid', borderWidth:1, borderColor:'black', padding:2, margin:2}}>
+              <i className="fa fa-copy" aria-hidden="true" style={{fontSize:15}}></i> 
+            </button>
 
             <p style={{fontSize:'20px', fontWeight:700, paddingTop:30}}>
               GREEN LANE PHYSIOTHERAPY & WELLNESS

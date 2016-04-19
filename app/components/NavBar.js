@@ -22,7 +22,7 @@ var NavBar = React.createClass({
     return (
       <nav className="navbar navbar-inverse" style={{margin:0, zIndex:10}}>
         <div className="container-fluid">
-          <div className="navbar-header">
+          <div className="navbar-header" style={{paddingRight:30}}>
             <button ref='collapseButton' type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
               <span className="icon-bar"></span>
               <span className="icon-bar"></span>

@@ -17,7 +17,7 @@ var PatientResources = React.createClass({
                   </div>
                   <div className="col-sm-6" style={{backgroundColor:'clear'}}>
                     <p style={{fontSize:'large', fontWeight:900}}>PHYSICAL EXERCISES</p>
-                    <p style={{fontSize:16, fontFamily:'Arial'}}>HEP2go - Home Exercise Program:  <a href='www.hep2go.com' style={{color:'#faa732'}}>www.hep2go.com</a></p>
+                    <p style={{fontSize:16, fontFamily:'Arial'}}>HEP2go - Home Exercise Program:  <a href='http://www.hep2go.com' style={{color:'#faa732'}}>http://www.hep2go.com</a></p>
                   </div>
                 </td>
               </tr>
