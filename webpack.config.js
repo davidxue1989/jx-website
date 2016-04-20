@@ -1,7 +1,12 @@
+var webpack = require('webpack');
+var path = require('path');
+
 module.exports = {
   entry: "./app/App.js",
   output: {
-    filename: "public/bundle.js"
+    path: path.join(__dirname, '/public'),
+    publicPath: '/',
+    filename: "bundle.js"
   },
   module: {
     loaders: [
@@ -14,5 +19,14 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  devServer: {
+    contentBase: './public',
+    hot: true
+  },
+  plugins: [
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin()
+  ]
 }
